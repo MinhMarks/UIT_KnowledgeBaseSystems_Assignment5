@@ -1,0 +1,144 @@
+<Window x:Class="SortingVisualizer.HomePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sorting Algorithm Visualizer - Trang chủ" 
+        Height="700" Width="900"
+        MinHeight="500" MinWidth="600"
+        WindowStartupLocation="CenterScreen"
+        Background="#1e1e2e"
+        Icon="app.ico">
+    
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            
+            <!-- Header with Logo -->
+            <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0,20,0,20">
+                <Image Source="app.ico" Width="100" Height="100" Margin="0,0,0,15"/>
+                <TextBlock Text="🔢 Sorting Algorithm Visualizer" 
+                           FontSize="32" 
+                           FontWeight="Bold" 
+                           Foreground="#cdd6f4"
+                           HorizontalAlignment="Center"/>
+                <TextBlock Text="Hệ thống minh họa thuật toán sắp xếp trực quan" 
+                           FontSize="14" 
+                           Foreground="#a6adc8"
+                           HorizontalAlignment="Center"
+                           Margin="0,8,0,0"/>
+            </StackPanel>
+            
+            <!-- Main Content -->
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+                
+                <!-- Đề tài -->
+                <Border Background="#313244" CornerRadius="12" Padding="25" Margin="0,0,0,20" MaxWidth="550">
+                    <StackPanel>
+                        <TextBlock Text="📚 Đề tài" 
+                                   FontSize="18" 
+                                   FontWeight="Bold" 
+                                   Foreground="#89b4fa"
+                                   Margin="0,0,0,12"/>
+                        <TextBlock Text="Xây dựng Hệ thống minh họa Thuật toán Sắp xếp trực quan" 
+                                   FontSize="13" 
+                                   Foreground="#cdd6f4"
+                                   TextWrapping="Wrap"/>
+                        <TextBlock Text="• Selection Sort (Sắp xếp chọn)" 
+                                   FontSize="12" 
+                                   Foreground="#a6adc8"
+                                   Margin="10,8,0,0"/>
+                        <TextBlock Text="• Quick Sort (Sắp xếp nhanh)" 
+                                   FontSize="12" 
+                                   Foreground="#a6adc8"
+                                   Margin="10,4,0,0"/>
+                    </StackPanel>
+                </Border>
+                
+                <!-- Thông tin nhóm -->
+                <Border Background="#313244" CornerRadius="12" Padding="25" Margin="0,0,0,20" MaxWidth="550">
+                    <StackPanel>
+                        <TextBlock Text="👥 Nhóm 5" 
+                                   FontSize="18" 
+                                   FontWeight="Bold" 
+                                   Foreground="#a6e3a1"
+                                   Margin="0,0,0,12"/>
+                        
+                        <Grid Margin="0,4,0,4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="1." Foreground="#f9e2af" FontSize="13"/>
+                            <TextBlock Grid.Column="1" Text="Nguyễn Thái Sơn" Foreground="#cdd6f4" FontSize="13"/>
+                        </Grid>
+                        
+                        <Grid Margin="0,4,0,4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="2." Foreground="#f9e2af" FontSize="13"/>
+                            <TextBlock Grid.Column="1" Text="Trần Lê Minh Nhật" Foreground="#cdd6f4" FontSize="13"/>
+                        </Grid>
+                        
+                        <Grid Margin="0,4,0,4">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="3." Foreground="#f9e2af" FontSize="13"/>
+                            <TextBlock Grid.Column="1" Text="Đặng Quang Vinh" Foreground="#cdd6f4" FontSize="13"/>
+                        </Grid>
+                        
+                        <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                            <TextBlock Text="👨‍🏫 GVHD: " Foreground="#a6adc8" FontSize="13"/>
+                            <TextBlock Text="Nguyễn Đình Hiển" Foreground="#f38ba8" FontSize="13" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                
+                <!-- Button vào chức năng chính -->
+                <Button x:Name="btnStart" 
+                        Content="🚀 Bắt đầu minh họa" 
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Padding="35,12"
+                        Cursor="Hand"
+                        Click="BtnStart_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border x:Name="border" 
+                                    Background="#89b4fa" 
+                                    CornerRadius="8" 
+                                    Padding="{TemplateBinding Padding}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="border" Property="Background" Value="#b4befe"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                
+            </StackPanel>
+            
+            <!-- Footer -->
+            <StackPanel Grid.Row="2" HorizontalAlignment="Center" Margin="0,25,0,15">
+                <TextBlock Text="Trường Đại học Công nghệ Thông tin - ĐHQG TP.HCM" 
+                           FontSize="11" 
+                           Foreground="#6c7086"
+                           HorizontalAlignment="Center"/>
+                <TextBlock Text="© 2024 - Bài tập môn Cấu trúc dữ liệu và Giải thuật" 
+                           FontSize="10" 
+                           Foreground="#585b70"
+                           HorizontalAlignment="Center"
+                           Margin="0,4,0,0"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>
