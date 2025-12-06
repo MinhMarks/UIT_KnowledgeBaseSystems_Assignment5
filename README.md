@@ -75,8 +75,12 @@ File exe sẽ được tạo trong folder `publish`
 
 ## 👥 Nhóm thực hiện
 
-- [Họ tên] - [MSSV] - [Lớp]
-- [Họ tên] - [MSSV] - [Lớp]
+- Trần Lê Minh Nhật 
+- Đặng Quang Vinh 
+- Nguyễn Thái Sơn
+
+## Giáo viên hướng dẫn 
+- PGS.TS Nguyễn Đình Hiển
 
 ## 📝 License
 
